@@ -69,6 +69,10 @@ declare module "./index" {
                  */
                 icon: string;
                 /**
+                 * Size of the icon
+                 */
+                iconSize: string;
+                /**
                  * Icon to be added on the right side
                  */
                 iconRight: string;
@@ -81,9 +85,9 @@ declare module "./index" {
                  */
                 clearIcon: string;
                 /**
-                 * Accessibility label for the clickable icon on the left side. Required when `iconClickable` is set.
+                 * Accessibility label for the clickable icon. Required when `iconClickable` is set.
                  */
-                ariaIconLeftLabel: string;
+                ariaIconLabel: string;
                 /**
                  * Accessibility label for the clickable icon on the right side. Required when `iconRightClickable` is set.
                  */
@@ -251,6 +255,10 @@ In addition, any CSS selector string or an actual DOM node can be used.
                  * Icon pack to use
                  */
                 iconPack: string;
+                /**
+                 * Size of the icon
+                 */
+                iconSize: string;
                 /**
                  * Enable rounded style
                  */
@@ -618,9 +626,17 @@ whether the value of the form's controls can be automatically completed by the b
                  */
                 icon: string;
                 /**
+                 * Size of the icon
+                 */
+                iconSize: string;
+                /**
                  * Icon to be added on the right side
                  */
                 iconRight: string;
+                /**
+                 * Variant of the right icon
+                 */
+                iconRightVariant: string;
                 /**
                  * Icon name for previous icon
                  */
@@ -959,9 +975,17 @@ In addition, any CSS selector string or an actual DOM node can be used.
                  */
                 icon: string;
                 /**
+                 * Size of the icon
+                 */
+                iconSize: string;
+                /**
                  * Icon to be added on the right side
                  */
                 iconRight: string;
+                /**
+                 * Variant of the right icon
+                 */
+                iconRightVariant: string;
                 /**
                  * Overlay content is shown into a modal on mobile
                  */
@@ -1502,6 +1526,10 @@ See icon library documentation for custom classes.
                  */
                 iconRight: string;
                 /**
+                 * Size of the icon
+                 */
+                iconSize: string;
+                /**
                  * Add a button/icon to clear the inputed text
                  */
                 clearable: boolean;
@@ -1510,9 +1538,9 @@ See icon library documentation for custom classes.
                  */
                 clearIcon: string;
                 /**
-                 * Accessibility label for the clickable icon on the left side. Required when `iconClickable` is set.
+                 * Accessibility label for the clickable icon. Required when `iconClickable` is set.
                  */
-                ariaIconLeftLabel: string;
+                ariaIconLabel: string;
                 /**
                  * Accessibility label for the clickable icon on the right side. Required when `iconRightClickable` is set.
                  */
@@ -2350,13 +2378,17 @@ whether the value of the form's controls can be automatically completed by the b
                  */
                 iconRight: string;
                 /**
-                 * Accessibility label for the clickable icon on the left side. Required when `iconClickable` is set.
+                 * Accessibility label for the clickable icon. Required when `iconClickable` is set.
                  */
-                ariaIconLeftLabel: string;
+                ariaIconLabel: string;
                 /**
                  * Accessibility label for the clickable icon on the right side. Required when `iconRightClickable` is set.
                  */
                 ariaIconRightLabel: string;
+                /**
+                 * Size of the icon
+                 */
+                iconSize: string;
                 /**
                  * Native options to use in HTML5 validation,
 whether the value of the form's controls can be automatically completed by the browser.
@@ -2691,6 +2723,10 @@ It replaces the label of a parent field as the name of the thumb.
                  * Icon pack
                  */
                 iconPack: string;
+                /**
+                 * Icon size
+                 */
+                iconSize: string;
                 /**
                  * Class of the step item element.
                  */
@@ -3265,6 +3301,10 @@ A string can use the `{value}` placeholder for the column label, a function rece
                  */
                 iconPack: string;
                 /**
+                 * Icon size
+                 */
+                iconSize: string;
+                /**
                  * Tabs item tag name
                  */
                 itemTag: DynamicComponent;
@@ -3404,6 +3444,10 @@ A string can use the `{value}` placeholder for the column label, a function rece
                  */
                 iconPack: string;
                 /**
+                 * Size of the icon
+                 */
+                iconSize: string;
+                /**
                  * Close icon name
                  */
                 closeIcon: string;
@@ -3495,9 +3539,17 @@ A string can use the `{value}` placeholder for the column label, a function rece
                  */
                 icon: string;
                 /**
+                 * Size of the icon
+                 */
+                iconSize: string;
+                /**
                  * Icon name of close icon on selected item
                  */
                 closeIcon: string;
+                /**
+                 * Size of the close icon on selected item
+                 */
+                closeIconSize: string;
                 /**
                  * Accessibility label for the close button
                  */
@@ -3584,9 +3636,17 @@ In addition, any CSS selector string or an actual DOM node can be used.
                  */
                 icon: string;
                 /**
+                 * Size of the icon
+                 */
+                iconSize: string;
+                /**
                  * Icon to be added on the right side
                  */
                 iconRight: string;
+                /**
+                 * Variant of the right icon
+                 */
+                iconRightVariant: string;
                 /**
                  * Overlay content is shown into a modal on mobile
                  */
@@ -3612,15 +3672,15 @@ In addition, any CSS selector string or an actual DOM node can be used.
                 /**
                  * Accessibility seconds select aria label
                  */
-                ariaSelectSecondLabel: string;
+                ariaSelectSecondsLabel: string;
                 /**
                  * Accessibility minutes select aria label
                  */
-                ariaSelectMinuteLabel: string;
+                ariaSelectMinutesLabel: string;
                 /**
                  * Accessibility hours select aria label
                  */
-                ariaSelectHourLabel: string;
+                ariaSelectHoursLabel: string;
                 /**
                  * Class of the root element
                  */
@@ -3715,7 +3775,7 @@ In addition, any CSS selector string or an actual DOM node can be used.
                 /**
                  * Position of the Tooltip relative to the trigger
                  */
-                position: "auto" | "bottom-left" | "bottom-right" | "bottom" | "left" | "right" | "top-left" | "top-right" | "top";
+                position: PopoverPosition;
                 /**
                  * Tooltip default animation
                  */
@@ -3724,45 +3784,6 @@ In addition, any CSS selector string or an actual DOM node can be used.
                  * Limit the tooltip content width
                  */
                 maxWidth: string;
-                /**
-                 * Tooltip trigger tag name
-                 */
-                triggerTag: DynamicComponent;
-                /**
-                 * Show when hover over the trigger
-                 * @deprecated will be removed
-                 */
-                openOnHover: boolean;
-                /**
-                 * Show when trigger get focused
-                 * @deprecated will be removed
-                 */
-                openOnFocus: boolean;
-                /**
-                 * Show when clicked on the trigger
-                 * @deprecated will be removed - use OPopover instead
-                 */
-                openOnClick: boolean;
-                /**
-                 * Show when right clicked on the trigger
-                 * @deprecated will be removed - use OPopover instead
-                 */
-                openOnContextmenu: boolean;
-                /**
-                 * Close on hover out of the content
-                 * @deprecated will be removed
-                 */
-                closeable: boolean;
-                /**
-                 * Close when clicked outside of the panel
-                 * @deprecated will be removed
-                 */
-                closeOnOutside: boolean;
-                /**
-                 * Close when pressing escape key
-                 * @deprecated will be removed
-                 */
-                closeOnEscape: boolean;
                 /**
                  * Append the component to another part of the DOM.
 Set `true` to append the component to the body.
@@ -3774,42 +3795,33 @@ In addition, any CSS selector string or an actual DOM node can be used.
                  */
                 rootClass: ClassDefinition;
                 /**
-                 * Class of the root element when teleported
+                 * Class of the root element when disabled
+                 */
+                disabledClass: ClassDefinition;
+                /**
+                 * Class for the root element when active
+                 */
+                activeClass: ClassDefinition;
+                /**
+                 * Class of the content element when teleported
                  */
                 teleportClass: ClassDefinition;
-                /**
-                 * Class of the trigger element
-                 */
-                triggerClass: ClassDefinition;
                 /**
                  * Class of the content element
                  */
                 contentClass: ClassDefinition;
                 /**
-                 * Class of the content element with position
+                 * Class of the content element when active
                  */
-                positionClass: ClassDefinition;
+                contentActiveClass: ClassDefinition;
                 /**
                  * Class of the content element with variant
                  */
-                variantClass: ClassDefinition;
-                /**
-                 * Class of the content element when is multiline
-                 * @deprecated `multiple` prop will be removed
-                 */
-                multilineClass: ClassDefinition;
-                /**
-                 * Class of the content element when is always visible
-                 */
-                alwaysClass: ClassDefinition;
+                contentVariantClass: ClassDefinition;
                 /**
                  * Class of the arrow element
                  */
                 arrowClass: ClassDefinition;
-                /**
-                 * Class of the arrow element with position
-                 */
-                arrowPositionClass: ClassDefinition;
                 /**
                  * Class of the arrow element with variant
                  */
